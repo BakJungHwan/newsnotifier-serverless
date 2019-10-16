@@ -1,7 +1,7 @@
 {
-  "resource": "/hello",
-  "path": "/hello",
-  "httpMethod": "GET",
+  "resource": "/register",
+  "path": "auth/register",
+  "httpMethod": "POST",
   "headers": {
     "Accept": "*/*",
     "Host": "azr46ml5ib.execute-api.ap-northeast-2.amazonaws.com",

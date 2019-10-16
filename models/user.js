@@ -1,24 +1,33 @@
 const mongoose = require('mongoose');
-const User = new mongoose.Schema({
+const Schema = mongoose.Schema;
+
+const User = new Schema({
    user_id:{type:String, required:true, unique:true},
    password:{type:String, required:true},
-   api_auth:[String]
+   auth:{type:String, default:'user'},
+   api_auth:{type:[String], default:[]}
+
 });
 
-User.statics.findOneByUserId = user_id =>
+// mongoose.Schema에 함수를 추가할 때 () => {} 형태의 함수를 사용하면 this에 빈 객체가 추가된다.
+// 그러므로 function(){} 형태로 함수를 추가하도록 해야겠다.
+User.statics.findOneByUserId = function(user_id)
 {
     return this.findOne({user_id}).exec();
 };
 
-User.statics.create = (user_id, password) => {
+User.statics.create = function(user_id, password){
+    const default_api_auth = ["apis/notify_works/"+user_id];
     const user = new this({
-        user_id,
-        password
+        user_id:user_id,
+        password:password,
+        auth:'user',
+        api_auth:default_api_auth
     });
     return user.save();
 };
 
-User.methods.verify = password => {
+User.methods.verify = function(password){
     return this.password === password;
 };
 
