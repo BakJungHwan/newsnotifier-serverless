@@ -1,0 +1,52 @@
+{
+  "resource": "/hello",
+  "path": "/hello",
+  "httpMethod": "GET",
+  "headers": {
+    "Accept": "*/*",
+    "Host": "azr46ml5ib.execute-api.ap-northeast-2.amazonaws.com",
+    "X-Forwarded-For": "112.187.193.204, 64.252.139.152",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "queryStringParameters": {
+    "a": "a",
+    "b": "b"
+  },
+  "multiValueQueryStringParameters": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ]
+  },
+  "pathParameters": {
+    "id": "7777777"
+  },
+  "stageVariables": null,
+  "requestContext": {
+    "resourcePath": "/hello",
+    "httpMethod": "GET",
+    "requestTime": "14/Oct/2019:12:56:59 +0000",
+    "path": "/dev/hello",
+    "requestTimeEpoch": 1571057819099,
+    "requestId": "b9d842eb-c8f2-4224-b1aa-0ddb6bf23c85",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "112.187.193.204",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "PostmanRuntime/7.18.0",
+      "user": null
+    }
+  },
+  "body": null,
+  "isBase64Encoded": false
+}
