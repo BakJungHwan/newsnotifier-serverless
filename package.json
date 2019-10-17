@@ -5,6 +5,7 @@
   "main": "config.js",
   "dependencies": {
     "aws-sdk": "^2.550.0",
+    "cookie": "^0.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.5"
   },

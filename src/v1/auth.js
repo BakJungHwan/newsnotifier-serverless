@@ -69,8 +69,8 @@ module.exports.login = async event => {
             "Set-Cookie": "halxtkToken="+ token + ";secure;path=/",
             //"Content-Type": "application/json",
             "Access-Control-Allow-Origin":"https://www.google.com",
-            "Access-Control-Allow-Credentials":"true"
-            //"Access-Control-Allow-Headers":"Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization"
+            "Access-Control-Allow-Credentials":"true",
+            "Access-Control-Allow-Headers":"Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization"
 
         };
         return before_return(ret);
