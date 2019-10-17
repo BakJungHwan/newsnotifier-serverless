@@ -217,6 +217,13 @@ functions:
       - http:
           path: v1/apis/auth/register
           method: post
+
+  check_request:
+    handler: src/v1/test.request
+    events:
+      - http:
+          path: v1/apis/test/request
+          method: get
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
